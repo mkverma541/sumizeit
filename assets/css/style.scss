@@ -644,10 +644,21 @@ button:active {
 .why-sumizeit {
   padding-top: 120px;
   padding-bottom: 80px;
+  .swiper {
+    width: 100%;              
+    height: 100vh;
+  }
   .items {
     max-width: 1020px;
     margin: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #bdbdbd42;
+    .row {
+      width: 100%;
+    }
     @include breakpoint(768) {
       .row {
         flex-wrap: wrap-reverse;
