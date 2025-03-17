@@ -367,6 +367,18 @@ a {
 .header .flex {
   display: flex;
 }
+@media (max-width: 576px) {
+  .header .search-bar {
+    border: 0;
+    width: 30px;
+    margin-right: 32px;
+    margin-left: auto;
+    margin-top: 7px;
+  }
+  .header .search-bar input {
+    display: none;
+  }
+}
 
 .logo-search {
   display: flex;
@@ -506,6 +518,33 @@ button:active {
 .close-menu:hover {
   transform: rotate(90deg);
   transition: transform 0.3s ease-in-out;
+}
+
+#searchModal .modal-content {
+  border: 0;
+  padding: 10px 10px 0;
+}
+
+.search-results {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.search-results ul {
+  padding: 0;
+}
+.search-results li {
+  font-size: 13px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #e2e2e2;
+  list-style-type: none;
+  cursor: pointer;
+}
+.search-results li:hover {
+  background-color: #f2f2f2;
+}
+.search-results li:last-child {
+  border-bottom: none;
 }
 
 .hero {

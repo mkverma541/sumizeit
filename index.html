@@ -39,8 +39,10 @@
         <div class="wrap">
           <div class="logo-search w-full">
             <img src="/assets/images/logo.svg" alt="Sumizeit" class="logo" />
-            <div class="search-bar">
+
+            <div class="search-bar" data-bs-toggle="modal" data-bs-target="#searchModal">
               <img src="/assets/images/search.svg" alt="Search" class="icon" />
+
               <input type="text" placeholder="Search all 1M+ books" />
             </div>
           </div>
@@ -78,6 +80,38 @@
         </div>
       </div>
     </header>
+
+
+<!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="search-bar">
+          <img src="/assets/images/search.svg" alt="Search" class="icon" />
+
+          <input type="text" placeholder="Search all 1M+ books" />
+        </div>
+        <div>
+          <ul class="search-results">
+            <li>Atomic Habits</li>
+            <li>Think and Grow Rich</li>
+            <li>Rich Dad Poor Dad</li>
+            <li>Atomic Habits</li>
+            <li>Think and Grow Rich</li>
+            <li>Rich Dad Poor Dad</li>
+            <li>Atomic Habits</li>
+            <li>Think and Grow Rich</li>
+            <li>Rich Dad Poor Dad</li>
+            <li>Atomic Habits</li>
+            <li>Think and Grow Rich</li>
+            <li>Rich Dad Poor Dad</li>
+            </ul> 
+      </div>
+  </div>
+</div>
+</div>
+</div>
 
     <section class="hero">
       <div class="container">

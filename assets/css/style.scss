@@ -307,7 +307,7 @@ a {
     right: 10px;
     top: 27px;
   }
-  @media (max-width: 1024px) {
+  @include breakpoint(1024) {
     .nav {
       display: none;
     }
@@ -321,6 +321,18 @@ a {
   }
   .flex {
     display: flex;
+  }
+  @include breakpoint(576) {
+    .search-bar {
+      border: 0;
+      width: 30px;
+      margin-right: 32px;
+      margin-left: auto;
+      margin-top: 7px;
+      input {
+        display: none;
+      }
+    }
   }
 }
 .logo-search {
@@ -343,6 +355,7 @@ a {
   color: #1f1e1e;
   position: relative;
   margin-right: 30px;
+
   input {
     border: none;
     outline: none;
@@ -360,6 +373,7 @@ a {
     left: 10px;
   }
 }
+
 .dropdown-menu {
   border-radius: 10px;
 }
@@ -448,6 +462,35 @@ button:active {
 .close-menu:hover {
   transform: rotate(90deg);
   transition: transform 0.3s ease-in-out;
+}
+
+#searchModal {
+  .modal-content {
+    border: 0;
+    padding: 10px 10px 0;
+  }
+}
+
+.search-results {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  ul {
+    padding: 0;
+  }
+  li {
+    font-size: 13px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #e2e2e2;
+    list-style-type: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 
 .hero {
