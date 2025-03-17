@@ -214,7 +214,7 @@
     </section>
 
     <!--Best selling titles to -->
-    <section class="best-selling-books bg-blue">
+    <section class="best-selling-books bg-blue previous-section">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -1417,11 +1417,13 @@
       loop: true,
       slidesPerView: 'auto', // Let it auto-adjust based on min-width
       breakpoints: {
-        1920: { slidesPerView: 5.6 },
-        1660: { slidesPerView: 4.8 },
-        1440: { slidesPerView: 4.2 },
-        1280: { slidesPerView: 3.6 },
-        1024: { slidesPerView: 3.0 },
+        1920: { slidesPerView: 5.2},
+        1800: { slidesPerView: 4.9  },
+        1600: { slidesPerView: 4.4 },
+        1440: { slidesPerView: 4.0 },
+        1366: { slidesPerView: 3.8 },
+        1280: { slidesPerView: 3.5 },
+        991: { slidesPerView: 2.7 },
         768: { slidesPerView: 2.2 },
         640: { slidesPerView: 1.8 },
         480: { slidesPerView: 1.4 },
@@ -1496,7 +1498,6 @@
   let swiper = new Swiper(".fullScreenSlider", {
     direction: "vertical",
     loop: false,
-    
     speed: 800, // Adjust speed for smoother transitions
     mousewheel: {
       invert: false,
@@ -1515,6 +1516,11 @@
         setTimeout(() => {
           document.querySelector(".next-section").scrollIntoView({ behavior: "smooth", block: "start" });
           window.scrollBy(0, -40);
+        }, 500);
+      },
+      reachBeginning: function () {
+        setTimeout(() => {
+          document.querySelector(".previous-section").scrollIntoView({ behavior: "smooth", block: "start" });
         }, 500);
       },
     },
