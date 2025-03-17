@@ -52,7 +52,7 @@ a {
     line-height: 6rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .text-1xl {
     font-size: 4rem;
     line-height: 5rem;
@@ -87,7 +87,7 @@ a {
     line-height: 5rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .text-xl {
     font-size: 3.2rem;
     line-height: 4rem;
@@ -123,7 +123,7 @@ a {
     line-height: 3.6rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .text-lg {
     font-size: 2.4rem;
     line-height: 3rem;
@@ -159,7 +159,7 @@ a {
     line-height: 3rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .text-md {
     font-size: 2rem;
     line-height: 2.8rem;
@@ -332,7 +332,7 @@ a {
   padding-left: 60px;
   padding-right: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .header .container {
     padding-left: 10px;
     padding-right: 10px;
@@ -577,7 +577,7 @@ button:active {
     margin-left: 0px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .hero .flower {
     display: none;
   }
@@ -588,7 +588,7 @@ button:active {
 .hero .row {
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .hero .row {
     flex-wrap: wrap-reverse;
   }
@@ -648,7 +648,7 @@ button:active {
   border: 0;
   min-width: 272px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .best-selling-books .card {
     min-width: 220px;
   }
@@ -759,7 +759,7 @@ button:active {
 .why-sumizeit .items .row {
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .why-sumizeit .items .row {
     flex-wrap: wrap-reverse;
     padding-bottom: 30px;
@@ -794,7 +794,7 @@ button:active {
 .why-sumizeit .items .right {
   border-left: 1px solid rgba(189, 189, 189, 0.2588235294);
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .why-sumizeit .items .right {
     border-left: none;
   }
@@ -843,7 +843,7 @@ button:active {
   line-height: 5rem;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .stats .wrap .count {
     font-size: 3.2rem;
     line-height: 4rem;
@@ -853,7 +853,7 @@ button:active {
   font-size: 1.6rem;
   font-weight: 400;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .stats .wrap .title {
     font-size: 1.4rem;
   }
@@ -864,7 +864,7 @@ button:active {
   top: 0;
   opacity: 0.7;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .stats .shape1 {
     max-width: 112px;
   }
@@ -879,9 +879,9 @@ button:active {
   top: 50px;
   left: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .stats .shape2 {
-    max-width: 200px;
+    max-width: 180px;
     left: 10px;
     top: 10px;
   }
@@ -937,7 +937,7 @@ button:active {
   scale: 0.94;
   transition: scale 0.3s ease-in-out;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .books-categories .slider .card {
     border-radius: 20px;
     min-width: 290px;
@@ -979,7 +979,7 @@ button:active {
   max-width: 1091px;
   margin: 40px auto 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .books-categories .btn-wrap {
     display: flex;
     overflow-x: auto;
@@ -1003,7 +1003,7 @@ button:active {
   display: flex;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .available-on {
     padding-top: 50px;
   }
@@ -1021,8 +1021,9 @@ button:active {
 }
 .available-on .app-links a img {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .available-on .app-links {
     margin: 30px 0;
   }
@@ -1086,6 +1087,11 @@ button:active {
   line-height: 23px;
   min-height: 185px;
 }
+@media (max-width: 810px) {
+  .reviews .card .review-text {
+    min-height: 210px;
+  }
+}
 .reviews .card .meta {
   display: flex;
   align-items: center;
@@ -1129,7 +1135,7 @@ button:active {
 .catalogue h2 {
   margin-bottom: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue h2 {
     margin-bottom: 0px;
   }
@@ -1141,7 +1147,7 @@ button:active {
   font-family: "Archivo", sans-serif;
   font-style: normal;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue h3 {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -1159,7 +1165,7 @@ button:active {
   font-family: "Archivo", sans-serif;
   font-style: normal;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .widget h3 {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -1199,7 +1205,7 @@ footer .social-links {
   justify-content: flex-end;
   gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue .social-links,
   footer .social-links {
     justify-content: center;
@@ -1210,7 +1216,7 @@ footer .social-links {
 footer .app-store-btn {
   margin-top: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue .app-store-btn,
   footer .app-store-btn {
     margin-top: 15px;
@@ -1223,7 +1229,7 @@ footer .bottom {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue .bottom,
   footer .bottom {
     text-align: center;
@@ -1241,7 +1247,7 @@ footer .bottom ul {
   align-items: center;
   gap: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .catalogue .bottom ul,
   footer .bottom ul {
     justify-content: center;
