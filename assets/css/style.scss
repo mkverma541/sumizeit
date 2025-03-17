@@ -196,7 +196,7 @@ a {
     border: 1px solid #1f1e1e;
     border-radius: 50%;
     position: absolute;
-    top: -2.7px;
+    top: -3px;
     left: -2.8px;
     opacity: 0;
   }
@@ -232,6 +232,11 @@ a {
 .bg-dark {
   background-color: #211f1f;
   color: #fff;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  margin-left: 4px;
 }
 
 .bg-blue {
@@ -558,6 +563,9 @@ button:active {
   .swiper-wrapper {
     justify-content: center;
     align-items: center;
+    @include breakpoint(991) {
+      justify-content: left;
+    }
   }
 }
 
@@ -1021,6 +1029,9 @@ button:active {
   }
   .slider {
     margin-top: 50px;
+  }
+  .swiper-button-next {
+    right: 40px;
   }
 }
 

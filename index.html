@@ -1052,6 +1052,14 @@
 
         <div class="container-fluid align-container">
           <div class="swiper reviewsSlider">
+              <!-- arrow and prev-->
+          <div class="swiper-button-prev">
+            <img src="assets/images/next-white.svg" alt="Prev" class="rotate" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="assets/images/next-white.svg" alt="Next" />
+          </div>
+
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="card">
@@ -1454,8 +1462,11 @@
             slidesPerView: 1.9,
             spaceBetween: 10,
           },
-
         },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       })
       
     </script>

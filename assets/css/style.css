@@ -223,7 +223,7 @@ a {
   border: 1px solid #1f1e1e;
   border-radius: 50%;
   position: absolute;
-  top: -2.7px;
+  top: -3px;
   left: -2.8px;
   opacity: 0;
 }
@@ -261,6 +261,11 @@ a {
 .bg-dark {
   background-color: #211f1f;
   color: #fff;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  margin-left: 4px;
 }
 
 .bg-blue {
@@ -618,6 +623,11 @@ button:active {
 .featured-on .swiper-wrapper {
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .featured-on .swiper-wrapper {
+    justify-content: left;
+  }
 }
 
 .best-selling-books {
@@ -1105,6 +1115,9 @@ button:active {
 }
 .reviews .slider {
   margin-top: 50px;
+}
+.reviews .swiper-button-next {
+  right: 40px;
 }
 
 .catalogue {
