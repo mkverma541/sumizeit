@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumizeit </title>
+    <link rel="icon" href="/favicon.ico" />
+    
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="wrap">
+          <div class="logo-search w-full">
+            <img src="/assets/images/logo.svg" alt="Sumizeit" class="logo" />
+            <div class="search-bar">
+              <img src="/assets/images/search.svg" alt="Search" class="icon" />
+              <input type="text" placeholder="Search all 1M+ books" />
+            </div>
+          </div>
+          <nav class="nav w-full">
+            <a href="#" class="nav-link">For Business</a>
+            <div class="dropdown">
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/assets/images/user-circle.svg"
+                  alt="User"
+                  class="icon mx-1"
+                />
+                Login
+                <img src="/assets/images/chevron-down.svg" alt="arrow" />
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-primary">Get Started</button>
+          </nav>
+            <button id="menu-btn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times d-none"></i>
+            </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="row items-center">
+          <div class="col-md-6">
+            <div class="content">
+              <img src="/assets/images/flower.svg" alt="Flower" class="flower" />
+              <h1 class="text-1xl">Learn 10X faster with <br> book summaries</h1>
+              <p>
+                Enjoy access to 15 minute non-fiction book summaries in text,
+                audio, and video format at an affordable price.
+              </p>
+              <a href="#" class="btn btn-primary">Get Started for free</a>
+              <p>
+               <span class="star-color">★</span> <span class="font-bold rating">4.8/5</span> From 5k reviews </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="/assets/images/illustration.png"
+              alt="Illustration"
+              class="img-fluid hero-img" 
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured on-->
+    <section class="featured-on bg-dark text-white">
+      <div class="container">
+        <div>
+          <div
+            class="text-center text-white uppercase mb-5 font-normal font-inter"
+          >
+            As featured in
+          </div>
+          <div class="swiper logoSlider">
+            <div class="swiper-wrapper">
+              <swiper-slide>
+                <img
+                  src="/assets/images/mashable-logo-white.png"
+                  alt="Mashable"
+                  width="123"
+                  height="39"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/entrepreneur-logo.png"
+                  alt="Entrepreneur"
+                  width="119"
+                  height="24"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="assets/images/apple.png"
+                  alt="Apple"
+                  width="85"
+                  height="29"
+                />
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/new-york-post.png"
+                  alt="New York Post"
+                  width="178"
+                  height="27"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/appsumo.svg"
+                  alt="Forbes"
+                  width="121"
+                  height="47"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/stack-social.svg"
+                  alt="Forbes"
+                  width="34"
+                  height="34"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/nbc-news.svg"
+                  alt="Forbes"
+                  width="111"
+                  height="18"
+                />
+              </swiper-slide>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Best selling titles to -->
+    <section class="best-selling-books bg-blue">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-xl heading">
+              Best selling titles to <br />
+              choose from.
+              <img src="/assets/images/sketch.svg" class="" alt="sketch"/>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid pr-0 align-container">
+        <div class="swiper bookSlider">
+          <div class="swiper-wrapper">
+            <swiper-slide>
+              <div class="card">
+                <div class="cover">
+                  <img
+                    src="/assets/images/img1.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                  <div class="thumb">
+                    <img
+                      src="/assets/images/thumb1.png"
+                      alt="Thumb"
+                      class="thumb-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="meta">
+                  <div class="author">James Clear</div>
+                  <div class="title">Atomic Habits</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star "></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card">
+                <div class="cover">
+                  <img
+                    src="/assets/images/img2.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                  <div class="thumb">
+                    <img
+                      src="/assets/images/thumb2.png"
+                      alt="Thumb"
+                      class="thumb-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="meta">
+                  <div class="author">Napoleon Hill</div>
+                  <div class="title">Think and Grow Rich</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating">4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="card">
+                <div class="cover">
+                  <img
+                    src="/assets/images/img3.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                  <div class="thumb">
+                    <img
+                      src="/assets/images/thumb3.png"
+                      alt="Thumb"
+                      class="thumb-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="meta">
+                  <div class="author">Alasdair Gray</div>
+                  <div class="title">Poor Things</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card">
+                <div class="cover">
+                  <img
+                    src="/assets/images/img4.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                  <div class="thumb">
+                    <img
+                      src="/assets/images/thumb4.png"
+                      alt="Thumb"
+                      class="thumb-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="meta">
+                  <div class="author">Jonathan Haidt</div>
+                  <div class="title">The Anxious Generation</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card">
+                <div class="cover">
+                  <img
+                    src="/assets/images/img1.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                  <div class="thumb">
+                    <img
+                      src="/assets/images/thumb1.png"
+                      alt="Thumb"
+                      class="thumb-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="meta">
+                  <div class="author">James Clear</div>
+                  <div class="title">Atomic Habits</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star fill"></i>
+                      <i class="fas fa-star "></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </div>
+        </div>
+      </div>
+      <div class="container bottom relative">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#" class="btn btn-primary">Get Started for free</a>
+          </div>
+          <div class="col-sm-6 relative flex slider-nav-wrap">
+            <div class="slider-nav ">
+              <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- arrow and prev-->
+            <div class="swiper-button-prev">
+              <img src="assets/images/prev.svg" alt="Prev" />
+            </div>
+            <div class="swiper-button-next">
+              <img src="assets/images/next.svg" alt="Next" />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+   <!-- Why sumizeit-->
+
+    <section class="why-sumizeit">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="text-xl mb-4">Why Sumizeit?</h2>
+            <p>
+              With Wiser, you’ll learn practical and useful skills that you can
+              apply right away — so you can reach <br />
+              your goal of having real-life conversations faster.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="swiper fullScreenSlider">
+              <div class="swiper-wrapper1">
+                <div class="swiper-slide items first">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">Highest quality content</h3>
+                        <p>
+                          Get powerful ideas in minutes—not hours or days with our book summaries of today’s most transformative books.
+                        </p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/highest-quality.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+                <div class="swiper-slide items">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">New content weekly</h3>
+                        <p>
+                          We add new content each week, including New York Times bestsellers.
+                        </p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/new-content.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+                <div class="swiper-slide items">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">Learn on the go</h3>
+                        <p>Learn anytime, anywhere - read, listen or watch summaries on IOS, tablet, laptop, and Kindle!</p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/learn-on-go.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+                <div class="swiper-slide items">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">Cancel anytime</h3>
+                        <p>Changed your mind? No problem. Cancel your subscription anytime.</p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/cancelled.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+                <div class="swiper-slide items">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">Collect Achievements</h3>
+                        <p>Learning just got more rewarding - track your progress and earn prizes using our mobile app.</p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/collect-achivements.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+                <div class="swiper-slide items last">
+                  <div class="row items-center">
+                    <div class="col-md-6 left">
+                        <h3 class="text-lg">And much more!</h3>
+                        <p>Improve your retention with quizzes. Enjoy PDF summaries, infographics, offline access with our app and more.</p>
+                  </div>
+                    <div class="col-md-6 right">
+                      <img
+                        src="/assets/images/much-more.png"
+                        alt="Why Sumizeit"
+                        class="img-fluid"
+                      />
+                      </div>  
+                </div>
+                
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col text-center">
+            <a href="#" class="btn btn-primary">Get Started for free</a>
+          </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-xl text-center"> 10X Your Reading with <br /> Sumizeit</h2>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <div class="wrap">
+                <div class="box">
+                   <div class="count">4.6/5</div>
+                  <div class="title">Apple App Store rating.</div>
+                </div>
+                <div class="box">
+                  <div class="count">91%</div>
+                 <div class="title">Read an average of 20X more <br/>books per month.</div>
+               </div>
+               <div>
+                <div class="box">
+                  <div class="count">93%</div>
+                  <div class="title">Our members adopt <br/> 
+                    better habits</div>
+                </div>
+               </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <img src="/assets/images/shape.svg" alt="shape" class="shape1" >
+      <img src="/assets/images/books.svg" alt="shape" class="shape2" >
+    </section>
+  
+    <!-- Books Categories-->
+    <section class="books-categories">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="text-xl mb-4">What are you Interested in?</h2>
+            <p>Select a category that you are interested in to view book summaries <br>in that category.</p>
+            <div class="btn-wrap">
+              <button class="search-btn">
+                <img src="/assets/images/search-white.svg"  alt="search"/>
+              </button>
+              <button class="btn btn-outline">Career & Success</button>
+              <button class="btn btn-outline">Literary Fiction</button>
+              <button class="btn btn-outline">Management & Leadership</button>
+              <button class="btn btn-outline">Historical Fiction </button>
+              <button class="btn btn-outline">Biographies & Memoirs</button>
+              <button class="btn btn-outline">Personal Development</button>
+              <button class="btn btn-outline">Science Fiction & Fantasy</button>
+              <button class="btn btn-outline">Business & Economics</button>
+              <button class="btn btn-outline">Health & Wellness</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid slider">
+        <div class="swiper booksSummarySlider">
+          <div class="swiper-wrapper">
+            <swiper-slide>
+              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(0, 0, 133, 0.05);">
+                <div class="cover">
+                  <img
+                    src="/assets/images/book1.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                </div>
+                <div class="meta">
+                  <div class="title">Atomic Habits</div>
+                  <div class="author">James Clear</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(255, 231, 87, 0.10);">
+                <div class="cover">
+                  <img
+                    src="/assets/images/book2.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                </div>
+                <div class="meta">
+                  <div class="title">Atomic Habits</div>
+                  <div class="author">James Clear</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card" style="
+              border: 1px solid rgba(31, 30, 30, 0.10);
+              background: rgba(33, 191, 212, 0.08);">
+                <div class="cover">
+                  <img
+                    src="/assets/images/book3.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                </div>
+                <div class="meta">
+                  <div class="title">Atomic Habits</div>
+                  <div class="author">James Clear</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card" style="
+              border: 1px solid rgba(31, 30, 30, 0.10);
+              background: rgba(244, 200, 225, 0.30);">
+                <div class="cover">
+                  <img
+                    src="/assets/images/book4.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                </div>
+                <div class="meta">
+                  <div class="title">Atomic Habits</div>
+                  <div class="author">James Clear</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10);
+              background: rgba(93, 232, 193, 0.10);">
+                <div class="cover">
+                  <img
+                    src="/assets/images/book5.png"
+                    alt="Book"
+                    class="cover-img"
+                  />
+                </div>
+                <div class="meta">
+                  <div class="title">Atomic Habits</div>
+                  <div class="author">James Clear</div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div>4.2k</div>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="text-center">
+          <div class="slider-nav">
+            <!-- pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- arrow and prev-->
+          <div class="swiper-button-prev">
+            <img src="assets/images/prev.svg" alt="Prev" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="assets/images/next.svg" alt="Next" />
+          </div>
+  
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+    <!-- Available on-->
+    <section class="available-on">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-xl-5 left ">
+              <div class="align-container">
+                <h2 class="text-xl">Available on <br/>
+                  Mobile and Desktop</h2>
+                  <p>Learn on the go anytime, anywhere using our mobile app.  </p>
+                  
+                  <div class="app-links">
+<div class="flex items-center gap-2">
+                    <a href="#">
+                    <img src="/assets/images/appstore.svg" alt="App Store" class="app-store">
+                    </a>  
+                    <a href="#">
+                      <img src="/assets/images/appstore.svg" alt="App Store" class="app-store">
+                      </a>  
+                  </div>
+                  </div>
+                  
+
+                  <div class="excellent font-semibold">Excellent 5/5</div>
+                  <div>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="rating-text">Over 1250 reviews on</p>
+                  <div>
+                    </div>
+                    
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-7 pr-0">
+            <img src="/assets/images/app-screenshot.png" alt="Mobile and Desktop" class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="featured-on bg-dark text-white">
+      <div class="container">
+          <div class="swiper logoSlider">
+            <div class="swiper-wrapper">
+              <swiper-slide>
+                <img
+                  src="/assets/images/mashable-logo-white.png"
+                  alt="Mashable"
+                  width="123"
+                  height="39"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/entrepreneur-logo.png"
+                  alt="Entrepreneur"
+                  width="119"
+                  height="24"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="assets/images/apple.png"
+                  alt="Apple"
+                  width="85"
+                  height="29"
+                />
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/new-york-post.png"
+                  alt="New York Post"
+                  width="178"
+                  height="27"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/appsumo.svg"
+                  alt="Forbes"
+                  width="121"
+                  height="47"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/stack-social.svg"
+                  alt="Forbes"
+                  width="34"
+                  height="34"
+                />
+              </swiper-slide>
+              <swiper-slide>
+                <img
+                  src="/assets/images/nbc-news.svg"
+                  alt="Forbes"
+                  width="111"
+                  height="18"
+                />
+              </swiper-slide>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="text-xl">People ❤️ SumizeIt</h2>
+            <p>Thousands of users love sumizeit.com, a leading book <br> summary website!</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid align-container">
+          <div class="swiper reviewsSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="title font-semibold">I love this app!</div>
+                    <div class="review-text">
+                      She a busy executive, I don't have time to read entire books, but I still want to stay informed. This app provides me with concise summaries of the latest bestsellers, so I can stay up-to-date on the latest trends and ideas without sacrificing my precious time.
+                    </div>
+                    <div class="meta">
+                      <div class="photo">
+                        <img src="/assets/images/u1.png" alt="User" class="user-img">
+                      </div>
+                      <div>
+                        <div class="user-name">Jane Doe</div>
+                        <div class="location">New York, NY</div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="title font-semibold">Easy to use & explore</div>
+                    <div class="review-text">
+                      This app has reignited my love of reading. It's so easy to use and the summaries are always well-written and informative.
+                    </div>
+                    <div class="meta">
+                      <div class="photo">
+                        <img src="/assets/images/u2.png" alt="User" class="user-img">
+                      </div>
+                      <div>
+                        <div class="user-name">Dane</div>
+                        <div class="location">New York, NY</div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="title font-semibold">Great product.</div>
+                    <div class="review-text">
+                      Have used them for a long time. One of my favorite things about them is that they are able to summarize a whole book into just 10 minutes
+                    </div>
+                    <div class="meta">
+                      <div class="photo">
+                        <img src="/assets/images/u3.png" alt="User" class="user-img">
+                      </div>
+                      <div>
+                        <div class="user-name">Dale</div>
+                        <div class="location">Sydney, Australia</div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="title font-semibold">Lifesaver for my studies!</div>
+                    <div class="review-text">
+                      This app has been a lifesaver for my studies. Instead of struggling to finish textbooks, I can quickly get the key points from each chapter.
+                    </div>
+                    <div class="meta">
+                      <div class="photo">
+                        <img src="/assets/images/u4.png" alt="User" class="user-img">
+                      </div>
+                      <div>
+                        <div class="user-name">Cameron </div>
+                        <div class="location">Edinburgh, UK</div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="title font-semibold">I love this app!</div>
+                    <div class="review-text">
+                      She a busy executive, I don't have time to read entire books, but I still want to stay informed. This app provides me with concise summaries of the latest bestsellers, so I can stay up-to-date on the latest trends and ideas without sacrificing my precious time.
+                    </div>
+                    <div class="meta">
+                      <div class="photo">
+                        <img src="/assets/images/u1.png" alt="User" class="user-img">
+                      </div>
+                      <div>
+                        <div class="user-name">Jane Doe</div>
+                        <div class="location">New York, NY</div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+              </div>
+
+              </div>
+        </div>
+        </div>
+
+        <div>
+          <div class="text-center">
+            <a href="#" class="btn btn-primary">Start your free trail</a>
+          </div>
+        </div>
+  </section>
+    
+    <!-- Footer  -->
+    
+    <section class="catalogue">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-md text-white">Discover the Blinkist catalogue</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Popular Titles</h3>
+            <ul class="links">
+              <li><a href="#">Atomic Habits</a>  </li>
+             <li><a href="#">The 5 AM Club</a>  </li>
+              <li><a href="#">The 7 Habits of Highly Effective People</a> </li> 
+                <li><a href="#">Rich Dad, Poor Dad</a>  </li>
+                  <li><a href="#">12 Rules For Life</a>  </li>
+                  <li><a href="#">Thinking, Fast and Slow</a>  </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Popular Categories</h3>
+            <ul class="links">
+              <li><a href="#">Personal Development</a>  </li>
+             <li><a href="#">Psychology</a>  </li>
+              <li><a href="#">Productivity</a> </li> 
+                <li><a href="#">Management & Leadership</a>  </li>
+                  <li><a href="#">Motivation & Inspiration</a>  </li>
+                  <li><a href="#">Mindfulness & Happiness</a>  </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Popular Topics</h3>
+            <ul class="links">
+              <li><a href="#">Best Christianity Books</a>  </li>
+             <li><a href="#">Best Love Books</a>  </li>
+              <li><a href="#">Best Leadership Books</a> </li> 
+                <li><a href="#">Best Autobiographies Books</a>  </li>
+                  <li><a href="#">Best Biographies Books</a>  </li>
+                  <li><a href="#">Best Persuasion Books</a>  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-8">
+                  <img src="/assets/images/logo-white.svg" alt="Sumizeit" class="logo mb-5">
+                  <p class="text-white leading-26">Satisfy Your Curiosity & Expand Your Knowledge with <br />Easy-to-Digest, 15-minute Non-Fiction Book Summaries.<br> 15-minute book summary app.</p>
+
+                  <img src="/assets/images/app-store-btn.svg" alt="App Store" class="app-store-btn">
+
+                
+                </div>
+                <div class="col-md-4">
+                  <div class="widget">
+                  <h3>Useful links</h3>
+                  <ul class="links">
+                    <li><a href="#">Pricing</a>  </li>
+                   <li><a href="#">Intelligence Quiz</a>  </li>
+                    <li><a href="#">Book Summaries</a> </li> 
+                      <li><a href="#">Gift Sumizeit</a>  </li>
+                        <li><a href="#">Affiliate Program</a>  </li>
+                        <li><a href="#">Cancel Subscription</a>  </li>
+                  </ul>
+                  </div>
+               </div>
+          </div>
+          </div>
+          <div class="col-md-4">
+            <div class="widget">
+             <h3>Company</h3>
+                  <ul class="links">
+                    <li><a href="#">About</a>  </li>
+                   <li><a href="#">Teams</a>  </li>
+                    <li><a href="#">Blog</a> </li> 
+                  </ul>
+                  </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <p class="text-white"> info (at) sumizeit (dot) com<br>Need help? Call us at (305) 501-1394</p>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="social-links">
+              <li>
+                <a href="#">
+                  <img src="/assets/images/facebook.svg" alt="Facebook">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/x.svg" alt="X">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/youtube-play.svg" alt="Youtube">
+                </a>
+              </li>
+              <li>
+              <a href="#">
+                <img src="/assets/images/instagram.svg" alt="Instagram">
+              </a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-white">© 2025 Wiser. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>
+                <a href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+      
+    </footer>
+  
+    <div id="mobile-menu" class="mobile-menu">
+      <button id="close-menu" class="close-menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <a href="#">For Business</a>
+      <a href="#">Login</a>
+      <button class="btn">Get Started</button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".logoSlider", {
+        slidesPerView: "auto",
+        spaceBetween: 50,
+      });
+
+      var swiper = new Swiper(".bookSlider", {
+         breakpoints: {
+          1660: {
+            slidesPerView: 4.8,
+            spaceBetween: 30,
+          },
+          1440: {
+            slidesPerView: 3.8,
+            spaceBetween: 30,
+          },
+         1024: {
+           slidesPerView: 3.2,
+           spaceBetween: 30,
+         },
+          768: {
+            slidesPerView: 2.6,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1.9,
+            spaceBetween: 10,
+          },
+        },
+       
+        pagination: {
+          el: ".best-selling-books .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".best-selling-books .swiper-button-next",
+          prevEl: ".best-selling-books .swiper-button-prev",
+        },
+      });
+
+    
+      var swiper = new Swiper(".booksSummarySlider", {
+         breakpoints: {
+          1660: {
+            slidesPerView: 4.8,
+            spaceBetween: 30,
+          },
+          1440: {
+            slidesPerView: 3.8,
+            spaceBetween: 30,
+          },
+         1024: {
+           slidesPerView: 3.2,
+           spaceBetween: 30,
+         },
+          768: {
+            slidesPerView: 2.6,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1.9,
+            spaceBetween: 10,
+          },
+        },
+       pagination: {
+         el: ".books-categories .swiper-pagination",
+         clickable: true,
+       },
+       navigation: {
+         nextEl: ".books-categories .swiper-button-next",
+         prevEl: ".books-categories .swiper-button-prev",
+       },
+      });
+
+      var swiper = new Swiper(".reviewsSlider", {
+      
+         breakpoints: {
+          1660: {
+            slidesPerView: 4.8,
+            spaceBetween: 30,
+          },
+          1440: {
+            slidesPerView: 4.5,
+            spaceBetween: 30,
+          },
+         1024: {
+           slidesPerView: 3.2,
+           spaceBetween: 30,
+         },
+          768: {
+            slidesPerView: 2.6,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1.9,
+            spaceBetween: 10,
+          },
+
+        },
+      })
+      
+    </script>
+    
+<script>
+  // Toggle mobile menu
+  document.getElementById("menu-btn").addEventListener("click", function () {
+    var mobileMenu = document.getElementById("mobile-menu");
+    var menuBtn = document.getElementById("menu-btn");
+    if (mobileMenu.style.top === "0px") {
+      mobileMenu.style.top = "-100%";
+      menuBtn.querySelector(".fa-bars").classList.remove("d-none");
+      menuBtn.querySelector(".fa-times").classList.add("d-none");
+    } else {
+      mobileMenu.style.top = "0";
+      menuBtn.querySelector(".fa-bars").classList.add("d-none");
+      menuBtn.querySelector(".fa-times").classList.remove("d-none");
+    }
+  });
+
+  document.getElementById("close-menu").addEventListener("click", function () {
+    document.getElementById("mobile-menu").style.top = "-100%";
+    var menuBtn = document.getElementById("menu-btn");
+    menuBtn.querySelector(".fa-bars").classList.remove("d-none");
+    menuBtn.querySelector(".fa-times").classList.add("d-none");
+  });
+</script>
+</script>
+  </body>
+</html>
+
