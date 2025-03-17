@@ -327,6 +327,8 @@ a {
   position: fixed;
   width: 100%;
   z-index: 999;
+  margin: auto;
+  max-width: 1920px;
   top: 0;
 }
 .header .container {
