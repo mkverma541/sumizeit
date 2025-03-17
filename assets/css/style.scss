@@ -16,6 +16,8 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
+  max-width: 1920px;
+  margin: auto;
 }
 
 $breakpoints: (
@@ -253,16 +255,21 @@ a {
     padding-right: 15px;
   }
 }
+
+
 .align-container {
-  padding-left: 120px;
+  padding-left: 160px;  
   @include breakpoint(1280) {
     padding-left: 60px;
+    padding-right: 60px;
   }
   @include breakpoint(1024) {
     padding-left: 30px;
+    padding-right: 30px;
   }
   @include breakpoint(390) {
     padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -274,7 +281,8 @@ a {
   width: 100%;
   z-index: 999;
   .container {
-    max-width: 1400px;
+    padding-left: 60px;
+    padding-right: 60px;
     @include breakpoint(768) {
       padding-left: 10px;
       padding-right: 10px;
@@ -498,11 +506,18 @@ button:active {
   margin-top: 82px;
   padding-top: 60px;
   padding-bottom: 0;
+  
   @include breakpoint(1024) {
     padding-bottom: 60px;
   }
   .flower {
-    margin-left: -30px;
+    margin-left: -60px;
+    @include breakpoint(1280){
+      margin-left: 0px;
+    }
+    @include breakpoint(768) {
+      display: none;
+    }
   }
   h1 {
     margin-bottom: 30px;
@@ -693,9 +708,17 @@ button:active {
     }
     .right {
       border-left: 1px solid #bdbdbd42;
+      @include breakpoint(768) {
+        border-left: none;
+      }
     }
   }
 }
+
+.swiper-slide.swiper-slide-blank {
+  display: none !important;
+}
+
 
 .stats {
   background-color: #e7f4ff;
@@ -811,9 +834,10 @@ button:active {
       overflow: hidden;
       margin: auto;
       text-align: center;
-      min-width: 250px;
+      min-width: 340px;
       @include breakpoint(768) {
         border-radius: 20px;
+        min-width: 290px;
       }
       .title {
         font-size: 3rem;
