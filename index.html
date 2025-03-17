@@ -434,9 +434,8 @@
             </p>
           </div>
         </div>
+        </div>
 
-        <div>
-          <!-- Swiper Vertical Fullscreen Slider -->
           <div class="swiper fullScreenSlider">
             <div class="swiper-wrapper">
               
@@ -545,13 +544,12 @@
             <!-- Pagination -->
             <!-- <div class="swiper-pagination"></div> -->
           </div>
-      </div>  
 
         <div class="row mt-5">
           <div class="col text-center">
             <a href="#" class="btn btn-primary">Get Started for free</a>
           </div>
-        </div>
+     
     </section>
 
 
@@ -1498,10 +1496,7 @@
   let swiper = new Swiper(".fullScreenSlider", {
     direction: "vertical",
     loop: false,
-    effect: "fade", // Enables smooth fading transition
-    fadeEffect: {
-      crossFade: true, // Ensures smooth blend
-    },
+    
     speed: 800, // Adjust speed for smoother transitions
     mousewheel: {
       invert: false,
@@ -1518,7 +1513,8 @@
     on: {
       reachEnd: function () {
         setTimeout(() => {
-          document.querySelector(".next-section").scrollIntoView({ behavior: "smooth" });
+          document.querySelector(".next-section").scrollIntoView({ behavior: "smooth", block: "start" });
+          window.scrollBy(0, -40);
         }, 500);
       },
     },

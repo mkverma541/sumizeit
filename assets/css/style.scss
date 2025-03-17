@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -857,7 +858,6 @@ button:active {
       &:hover {
         scale: 0.94;
         transition: scale 0.3s ease-in-out;
-
       }
       @include breakpoint(768) {
         border-radius: 20px;
@@ -1150,3 +1150,4 @@ footer {
     }
   }
 }
+
