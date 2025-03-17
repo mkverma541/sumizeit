@@ -828,13 +828,20 @@ button:active {
     margin-top: 40px;
     .card {
       width: 100%;
-      max-width: 341px;
+      max-width: 392px;
       height: 411px;
       border-radius: 40px;
       overflow: hidden;
       margin: auto;
       text-align: center;
-      min-width: 340px;
+      min-width: 392px;
+      scale: 0.85;
+      cursor: pointer;
+      &:hover {
+        scale: 0.94;
+        transition: scale 0.3s ease-in-out;
+
+      }
       @include breakpoint(768) {
         border-radius: 20px;
         min-width: 290px;
@@ -909,12 +916,21 @@ button:active {
   }
   .app-links {
     margin: 80px 0 30px;
+    a {
+      color: transparent;
+      img {
+        margin-right: 20px;
+      }
+    }
     @include breakpoint(768) {
       margin: 30px 0;
       img {
         margin-right: 10px;
       }
     }
+  }
+  .available-on {
+    max-width: 500px;
   }
   .excellent {
     font-size: 27px;
@@ -926,8 +942,13 @@ button:active {
   .stars {
     margin: 10px 0 15px;
   }
+  .app-screenshot {
+    max-width: 780px;
+  }
 }
-
+.text-right {
+  text-align: right;
+}
 .reviews {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1049,6 +1070,9 @@ footer {
         font-size: 1.6rem;
         font-weight: 300;
         color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
