@@ -493,6 +493,7 @@ button:active {
   align-items: center;
   justify-content: center;
   transition: top 0.5s ease-in-out;
+  z-index: 99;
 }
 
 .mobile-menu a,
