@@ -582,6 +582,11 @@ button:active {
   border: 0;
   min-width: 272px;
 }
+@media (max-width: 768px) {
+  .best-selling-books .card {
+    min-width: 220px;
+  }
+}
 .best-selling-books .card .cover {
   border-radius: 20px;
   overflow: hidden;
@@ -596,6 +601,11 @@ button:active {
   min-height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 768px) {
+  .best-selling-books .card .cover .cover-img {
+    min-height: 250px;
+  }
 }
 .best-selling-books .card .thumb {
   position: absolute;
@@ -714,7 +724,7 @@ button:active {
   max-width: 800px;
   text-align: center;
 }
-@media (max-width: 390px) {
+@media (max-width: 576px) {
   .stats .wrap {
     flex-wrap: wrap;
     justify-content: center;
@@ -822,6 +832,12 @@ button:active {
   overflow: hidden;
   margin: auto;
   text-align: center;
+  min-width: 250px;
+}
+@media (max-width: 768px) {
+  .books-categories .slider .card {
+    border-radius: 20px;
+  }
 }
 .books-categories .slider .card .title {
   font-size: 3rem;

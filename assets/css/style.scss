@@ -23,8 +23,8 @@ $breakpoints: (
   "1440": 1440px,
   "1366": 1366px,
   "1280": 1280px,
-  "991": 991px,
   "1024": 1024px,
+  "991": 991px,
   "810": 810px,
   "768": 768px,
   "576": 576px,
@@ -518,6 +518,9 @@ button:active {
     background-color: transparent;
     border: 0;
     min-width: 272px;
+    @include breakpoint(768) {
+      min-width: 220px;
+    }
     .cover {
       border-radius: 20px;
       overflow: hidden;
@@ -530,6 +533,9 @@ button:active {
         border-radius: 20px;
         min-height: 330px;
         object-fit: cover;
+        @include breakpoint(768) {
+          min-height: 250px;
+        }
       }
     }
     .thumb {
@@ -651,7 +657,7 @@ button:active {
     margin: auto;
     max-width: 800px;
     text-align: center;
-    @include breakpoint(390) {
+    @include breakpoint(576) {
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
@@ -750,6 +756,10 @@ button:active {
       overflow: hidden;
       margin: auto;
       text-align: center;
+      min-width: 250px;
+      @include breakpoint(768) {
+        border-radius: 20px;
+      }
       .title {
         font-size: 3rem;
         line-height: 3rem;
@@ -922,8 +932,8 @@ button:active {
     font-family: "Archivo", sans-serif;
     font-style: normal;
     @include breakpoint(768) {
-     margin-top: 50px;
-     margin-bottom: 20px;
+      margin-top: 50px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -939,7 +949,7 @@ button:active {
   @include breakpoint(768) {
     margin-top: 50px;
     margin-bottom: 20px;
-   }
+  }
 }
 
 footer {
