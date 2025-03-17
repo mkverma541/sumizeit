@@ -586,14 +586,23 @@ button:active {
       width: 100%;
       max-height: 322px;
       margin-bottom: 60px;
+      min-height: 322px;  
+      min-width: 322px;
+      @include breakpoint(991) {
+        min-height: 220px;
+        min-width: 220px;
+        max-width: 220px;
+      }
       .cover-img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
-        min-height: 330px;
         object-fit: cover;
-        @include breakpoint(768) {
-          min-height: 250px;
+        max-height: 322px;
+        position: absolute;
+        @include breakpoint(991) {
+          max-height: 220px;
+          max-width: 220px;
         }
       }
     }
@@ -943,6 +952,7 @@ button:active {
     margin: 10px 0 15px;
   }
   .app-screenshot {
+    width: 100%;
     max-width: 780px;
   }
 }

@@ -174,11 +174,10 @@
                   width="85"
                   height="29"
                 />
-                />
               </swiper-slide>
               <swiper-slide>
                 <img
-                  src="/assets/images/new-york-post.png"
+                  src="/assets/images/new-york-post-logo1.png"
                   alt="New York Post"
                   width="178"
                   height="27"
@@ -1005,7 +1004,7 @@
               </swiper-slide>
               <swiper-slide>
                 <img
-                  src="/assets/images/new-york-post.png"
+                  src="/assets/images/new-york-post-logo1.png"
                   alt="New York Post"
                   width="178"
                   height="27"
@@ -1485,30 +1484,36 @@
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-      let swiper = new Swiper(".fullScreenSlider", {
-        direction: "vertical", // Enables vertical scrolling
-        loop: false, // Prevent looping to avoid weird behavior
-        mousewheel: {
-          invert: false, // Ensures natural scrolling
-          releaseOnEdges: true, // Allows scrolling outside Swiper when at the top or bottom
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: false, // Allows keyboard control anywhere on the page
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        on: {
-          reachEnd: function () {
-            setTimeout(() => {
-              document.querySelector(".next-section").scrollIntoView({ behavior: "smooth" });
-            }, 500);
-          },
-        },
-      });
-    });
+  let swiper = new Swiper(".fullScreenSlider", {
+    direction: "vertical",
+    loop: false,
+    effect: "fade", // Enables smooth fading transition
+    fadeEffect: {
+      crossFade: true, // Ensures smooth blend
+    },
+    speed: 800, // Adjust speed for smoother transitions
+    mousewheel: {
+      invert: false,
+      releaseOnEdges: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      reachEnd: function () {
+        setTimeout(() => {
+          document.querySelector(".next-section").scrollIntoView({ behavior: "smooth" });
+        }, 500);
+      },
+    },
+  });
+});
+
 </script>
 </script>
   </body>
