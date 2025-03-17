@@ -1171,26 +1171,25 @@
       });
 
       var swiper = new Swiper(".bookSlider", {
+        spaceBetween: 30,
          breakpoints: {
           1660: {
             slidesPerView: 4.8,
-            spaceBetween: 30,
           },
           1440: {
             slidesPerView: 3.8,
-            spaceBetween: 30,
           },
          1024: {
            slidesPerView: 3.2,
-           spaceBetween: 30,
          },
           768: {
             slidesPerView: 2.6,
-            spaceBetween: 20,
           },
           640: {
             slidesPerView: 1.9,
-            spaceBetween: 10,
+          },
+          0 : {
+            slidesPerView: 1.2,
           },
         },
        
@@ -1224,7 +1223,11 @@
             spaceBetween: 20,
           },
           640: {
-            slidesPerView: 1.9,
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+          },
+          0: {
+            slidesPerView: 1.2,
             spaceBetween: 10,
           },
         },
