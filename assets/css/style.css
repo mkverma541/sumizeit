@@ -357,6 +357,9 @@ a {
   font-weight: 600;
   line-height: 20px; /* 125% */
 }
+.header .nav-link:hover {
+  text-decoration: underline;
+}
 .header .menu-btn {
   display: none;
   background: none;

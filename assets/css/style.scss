@@ -312,6 +312,12 @@ a {
     font-size: 16px;
     font-weight: 600;
     line-height: 20px; /* 125% */
+    &:hover {
+      text-decoration: underline;
+      // animate underline left to right on hover
+      
+
+    }
   }
   .menu-btn {
     display: none;
