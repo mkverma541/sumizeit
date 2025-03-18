@@ -39,7 +39,9 @@
         position: relative;
         display: flex;
         min-height: 200vh; /* Ensure enough scroll space */
-        max-width: 1039px;
+        max-width: 1100px;
+        padding-left: 30px;
+        padding-right: 30px;
         margin: auto;
         width: 100%;
         border-top: 1px solid #bdbdbd6b;
@@ -60,7 +62,7 @@
         display: flex;
         flex-direction: column;
         gap: 15vh;
-        padding: 40vh 0 ;
+        padding: 40vh 0;
         width: 50%;
       }
 
@@ -129,7 +131,7 @@
       <div class="container">
         <div class="wrap">
           <div class="logo-search w-full">
-            <img src="/assets/images/logo.svg" alt="Sumizeit" class="logo" />
+            <img src="/assets/images/logo.png" alt="Sumizeit" class="logo" />
 
             <div
               class="search-bar"
@@ -551,7 +553,6 @@
         </div>
       </div>
 
-      
       <div class="Steps_steps-section__padka">
         <div class="Steps_steps-section__wrapper-step__gbjJq">
           <div class="Steps_steps-section__step__1gZnH">
@@ -654,6 +655,105 @@
                 alt="Why Sumizeit"
                 class="img-fluid"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="swiper whySumizeitSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="single-slide">
+                <img
+                  src="/assets/images/highest-quality.png"
+                  alt="Why Sumizeit"
+                  class="img-fluid"
+                />
+                <h3 class="text-lg">Highest quality content</h3>
+                <p>
+                  Get powerful ideas in minutes—not hours or days with our book
+                  summaries of today’s most transformative books.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="single-slide">
+                <img
+                  src="/assets/images/new-content.png"
+                  alt="Why Sumizeit"
+                  class="img-fluid"
+                />
+                <h3 class="text-lg">New content weekly</h3>
+                <p>
+                  We add new content each week, including New York Times
+                  bestsellers.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="single-slide">
+                <img
+                  src="/assets/images/learn-on-go.png"
+                  alt="Why Sumizeit"
+                  class="img-fluid"
+                />
+
+                <h3 class="text-lg">Learn on the go</h3>
+                <p>
+                  Learn anytime, anywhere - read, listen or watch summaries on
+                  IOS, tablet, laptop, and Kindle!
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide ">
+              <div class="single-slide">
+                <img
+                  src="/assets/images/cancelled.png"
+                  alt="Why Sumizeit"
+                  class="img-fluid"
+                />
+
+                <h3 class="text-lg">Cancel anytime</h3>
+                <p>
+                  Changed your mind? No problem. Cancel your subscription
+                  anytime.
+                </p>
+              </div>
+
+              <div class="swiper-slide items">
+                <div class="single-slide">
+                  <img
+                    src="/assets/images/collect-achivements.png"
+                    alt="Why Sumizeit"
+                    class="img-fluid"
+                  />
+                  <h3 class="text-lg">Collect Achievements</h3>
+                  <p>
+                    Learning just got more rewarding - track your progress and
+                    earn prizes using our mobile app.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide items">
+                <div class="single-slide">
+                  <img
+                    src="/assets/images/much-more.png"
+                    alt="Why Sumizeit"
+                    class="img-fluid"
+                  />
+
+                  <h3 class="text-lg">And much more!</h3>
+                  <p>
+                    Improve your retention with quizzes. Enjoy PDF summaries,
+                    infographics, offline access with our app and more.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1755,6 +1855,32 @@
             images.forEach((img, i) => {
               img.classList.toggle("active", i === index);
             });
+          },
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        new Swiper(".whySumizeitSlider", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
           },
         });
       });

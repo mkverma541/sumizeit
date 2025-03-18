@@ -1263,4 +1263,24 @@ footer .bottom a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (max-width: 810px) {
+  .Steps_steps-section__padka {
+    display: none;
+  }
+}
+
+.whySumizeitSlider {
+  display: none;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.whySumizeitSlider .single-slide img {
+  margin-bottom: 20px;
+}
+@media (max-width: 810px) {
+  .whySumizeitSlider {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
