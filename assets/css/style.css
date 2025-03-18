@@ -1275,6 +1275,7 @@ footer .bottom a {
   display: none;
   margin-top: 30px;
   overflow: hidden;
+  height: auto !important;
 }
 .whySumizeitSlider .single-slide img {
   margin-bottom: 20px;
