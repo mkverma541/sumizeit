@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 * {
@@ -19,6 +18,7 @@ body {
   line-height: 2.4rem;
   max-width: 1920px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 $breakpoints: (
@@ -1153,9 +1153,9 @@ footer {
   }
 }
 
-.Steps_steps-section__padka {
+#stepsSlider {
   @include breakpoint(810) {
-    display: none;
+    display: none !important;
   }
 }
 

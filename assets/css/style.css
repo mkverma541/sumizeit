@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 * {
@@ -19,6 +18,7 @@ body {
   line-height: 2.4rem;
   max-width: 1920px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1266,8 +1266,8 @@ footer .bottom a {
 }
 
 @media (max-width: 810px) {
-  .Steps_steps-section__padka {
-    display: none;
+  #stepsSlider {
+    display: none !important;
   }
 }
 
