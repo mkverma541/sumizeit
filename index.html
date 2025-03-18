@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sumizeit </title>
+    <title>Sumizeit</title>
     <link rel="icon" href="/favicon.ico" />
-    
-     <link
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
@@ -30,9 +30,99 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <link rel="stylesheet" href="/assets/css/style.css" />
-             
+    <style>
+      .Steps_steps-section__padka {
+        position: relative;
+        display: flex;
+        min-height: 200vh; /* Ensure enough scroll space */
+        max-width: 1039px;
+        margin: auto;
+        width: 100%;
+        border-top: 1px solid #bdbdbd6b;
+        margin-top: 60px;
+      }
+
+      @media (max-width: 1041px) {
+        .Steps_steps-section__padka {
+          max-width: 100%;
+          width: 100%;
+          overflow: hidden;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+
+      .Steps_steps-section__wrapper-step__gbjJq {
+        display: flex;
+        flex-direction: column;
+        gap: 15vh;
+        padding: 40vh 0 ;
+        width: 50%;
+      }
+
+      .Steps_steps-section__step__1gZnH {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 0 0;
+        height: 30vh;
+        opacity: 0.3;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .Steps_steps-section__step__1gZnH p {
+        max-width: 377px;
+      }
+
+      .Steps_steps-section__step__1gZnH.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .Steps_steps-section__wrapper-image__dmieG {
+        height: 100vh;
+        position: sticky;
+        top: 80px;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: flex-end;
+        padding-right: 0;
+      }
+
+      .Steps_steps-section__visual-image__8RO3v {
+        width: 570px;
+        height: 570px;
+        position: relative;
+        text-align: right;
+      }
+
+      .Steps_steps-section__image__Vv7f0 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .Steps_steps-section__image__Vv7f0 img {
+        max-width: 432px;
+        margin-top: 5vh;
+      }
+      .Steps_steps-section__image__Vv7f0.active {
+        opacity: 1;
+      }
+
+      .image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -41,7 +131,11 @@
           <div class="logo-search w-full">
             <img src="/assets/images/logo.svg" alt="Sumizeit" class="logo" />
 
-            <div class="search-bar" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <div
+              class="search-bar"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+            >
               <img src="/assets/images/search.svg" alt="Search" class="icon" />
 
               <input type="text" placeholder="Search all 1M+ books" />
@@ -74,16 +168,28 @@
             </div>
             <button class="btn btn-primary">Get Started</button>
           </nav>
-            <button id="menu-btn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+          <button
+            id="menu-btn"
+            class="menu-btn"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
             <i class="fas fa-bars"></i>
             <i class="fas fa-times d-none"></i>
-            </button>
+          </button>
         </div>
       </div>
     </header>
 
     <!-- Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
@@ -106,11 +212,11 @@
                 <li>Atomic Habits</li>
                 <li>Think and Grow Rich</li>
                 <li>Rich Dad Poor Dad</li>
-                </ul> 
+              </ul>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
 
     <section class="hero">
@@ -118,22 +224,31 @@
         <div class="row items-center">
           <div class="col-md-6">
             <div class="content">
-              <img src="/assets/images/flower.svg" alt="Flower" class="flower" />
-              <h1 class="text-1xl">Learn 10X faster with <br> book summaries</h1>
+              <img
+                src="/assets/images/flower.svg"
+                alt="Flower"
+                class="flower"
+              />
+              <h1 class="text-1xl">
+                Learn 10X faster with <br />
+                book summaries
+              </h1>
               <p>
                 Enjoy access to 15 minute non-fiction book summaries in text,
                 audio, and video format at an affordable price.
               </p>
               <a href="#" class="btn btn-primary">Get Started for free</a>
               <p>
-               <span class="star-color">★</span> <span class="font-bold rating">4.8/5</span> From 5k reviews </p>
+                <span class="star-color">★</span>
+                <span class="font-bold rating">4.8/5</span> From 5k reviews
+              </p>
             </div>
           </div>
           <div class="col-md-6">
             <img
               src="/assets/images/illustration.png"
               alt="Illustration"
-              class="img-fluid hero-img" 
+              class="img-fluid hero-img"
             />
           </div>
         </div>
@@ -221,7 +336,7 @@
             <h2 class="text-xl heading">
               Best selling titles to <br />
               choose from.
-              <img src="/assets/images/sketch.svg" class="" alt="sketch"/>
+              <img src="/assets/images/sketch.svg" class="" alt="sketch" />
             </h2>
           </div>
         </div>
@@ -255,7 +370,7 @@
                       <i class="fas fa-star fill"></i>
                       <i class="fas fa-star fill"></i>
                       <i class="fas fa-star fill"></i>
-                      <i class="fas fa-star "></i>
+                      <i class="fas fa-star"></i>
                     </div>
                     <div>4.2k</div>
                   </div>
@@ -388,7 +503,7 @@
                       <i class="fas fa-star fill"></i>
                       <i class="fas fa-star fill"></i>
                       <i class="fas fa-star fill"></i>
-                      <i class="fas fa-star "></i>
+                      <i class="fas fa-star"></i>
                     </div>
                     <div>4.2k</div>
                   </div>
@@ -404,23 +519,23 @@
             <a href="#" class="btn btn-primary">Get Started for free</a>
           </div>
           <div class="col-sm-6 relative flex slider-nav-wrap">
-            <div class="slider-nav ">
+            <div class="slider-nav">
               <!-- pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- arrow and prev-->
-            <div class="swiper-button-prev">
-              <img src="assets/images/prev.svg" alt="Prev" />
-            </div>
-            <div class="swiper-button-next">
-              <img src="assets/images/next.svg" alt="Next" />
-            </div>
+              <div class="swiper-pagination"></div>
+              <!-- arrow and prev-->
+              <div class="swiper-button-prev">
+                <img src="assets/images/prev.svg" alt="Prev" />
+              </div>
+              <div class="swiper-button-next">
+                <img src="assets/images/next.svg" alt="Next" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <!-- Why sumizeit-->
+    <!-- Why sumizeit-->
 
     <section class="why-sumizeit">
       <div class="container">
@@ -434,176 +549,184 @@
             </p>
           </div>
         </div>
+      </div>
+
+      
+      <div class="Steps_steps-section__padka">
+        <div class="Steps_steps-section__wrapper-step__gbjJq">
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">Highest quality content</h3>
+            <p>
+              Get powerful ideas in minutes—not hours or days with our book
+              summaries of today’s most transformative books.
+            </p>
+          </div>
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">New content weekly</h3>
+            <p>
+              We add new content each week, including New York Times
+              bestsellers.
+            </p>
+          </div>
+
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">Learn on the go</h3>
+            <p>
+              Learn anytime, anywhere - read, listen or watch summaries on IOS,
+              tablet, laptop, and Kindle!
+            </p>
+          </div>
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">Cancel anytime</h3>
+            <p>
+              Changed your mind? No problem. Cancel your subscription anytime.
+            </p>
+          </div>
+
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">Collect Achievements</h3>
+            <p>
+              Learning just got more rewarding - track your progress and earn
+              prizes using our mobile app.
+            </p>
+          </div>
+
+          <div class="Steps_steps-section__step__1gZnH">
+            <h3 class="text-lg">And much more!</h3>
+            <p>
+              Improve your retention with quizzes. Enjoy PDF summaries,
+              infographics, offline access with our app and more.
+            </p>
+          </div>
         </div>
 
-          <div class="swiper fullScreenSlider">
-            <div class="swiper-wrapper">
-              
-                          <div class="swiper-slide items first">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">Highest quality content</h3>
-                                  <p>
-                                    Get powerful ideas in minutes—not hours or days with our book summaries of today’s most transformative books.
-                                  </p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/highest-quality.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                          <div class="swiper-slide items">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">New content weekly</h3>
-                                  <p>
-                                    We add new content each week, including New York Times bestsellers.
-                                  </p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/new-content.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                          <div class="swiper-slide items">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">Learn on the go</h3>
-                                  <p>Learn anytime, anywhere - read, listen or watch summaries on IOS, tablet, laptop, and Kindle!</p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/learn-on-go.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                          <div class="swiper-slide items">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">Cancel anytime</h3>
-                                  <p>Changed your mind? No problem. Cancel your subscription anytime.</p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/cancelled.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                          <div class="swiper-slide items">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">Collect Achievements</h3>
-                                  <p>Learning just got more rewarding - track your progress and earn prizes using our mobile app.</p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/collect-achivements.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                          <div class="swiper-slide items last">
-                            <div class="row items-center">
-                              <div class="col-md-6 left">
-                                  <h3 class="text-lg">And much more!</h3>
-                                  <p>Improve your retention with quizzes. Enjoy PDF summaries, infographics, offline access with our app and more.</p>
-                            </div>
-                              <div class="col-md-6 right">
-                                <img
-                                  src="/assets/images/much-more.png"
-                                  alt="Why Sumizeit"
-                                  class="img-fluid"
-                                />
-                                </div>  
-                          </div>
-                          
-                          </div>
-                      </div>
-                  
-            <!-- Pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-          </div>
+        <div class="Steps_steps-section__wrapper-image__dmieG">
+          <div class="Steps_steps-section__visual-image__8RO3v">
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/highest-quality.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/new-content.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/learn-on-go.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
 
-        <div class="row mt-5">
-          <div class="col text-center">
-            <a href="#" class="btn btn-primary">Get Started for free</a>
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/cancelled.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
+
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/learn-on-go.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
+
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/collect-achivements.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
+
+            <div class="Steps_steps-section__image__Vv7f0">
+              <img
+                src="/assets/images/much-more.png"
+                alt="Why Sumizeit"
+                class="img-fluid"
+              />
+            </div>
           </div>
-     
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col text-center">
+          <a href="#" class="btn btn-primary">Get Started for free</a>
+        </div>
+      </div>
     </section>
-
 
     <!-- Stats -->
     <section class="stats next-section">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="text-xl text-center"> 10X Your Reading with <br /> Sumizeit</h2>
+            <h2 class="text-xl text-center">
+              10X Your Reading with <br />
+              Sumizeit
+            </h2>
           </div>
         </div>
 
         <div class="row">
-            <div class="col">
-              <div class="wrap">
-                <div class="box">
-                   <div class="count">4.6/5</div>
-                  <div class="title">Apple App Store rating.</div>
+          <div class="col">
+            <div class="wrap">
+              <div class="box">
+                <div class="count">4.6/5</div>
+                <div class="title">Apple App Store rating.</div>
+              </div>
+              <div class="box">
+                <div class="count">91%</div>
+                <div class="title">
+                  Read an average of 20X more <br />books per month.
                 </div>
-                <div class="box">
-                  <div class="count">91%</div>
-                 <div class="title">Read an average of 20X more <br/>books per month.</div>
-               </div>
-               <div>
+              </div>
+              <div>
                 <div class="box">
                   <div class="count">93%</div>
-                  <div class="title">Our members adopt <br/> 
-                    better habits</div>
+                  <div class="title">
+                    Our members adopt <br />
+                    better habits
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
 
-      <img src="/assets/images/shape.svg" alt="shape" class="shape1" >
-      <img src="/assets/images/books.svg" alt="shape" class="shape2" >
+      <img src="/assets/images/shape.svg" alt="shape" class="shape1" />
+      <img src="/assets/images/books.svg" alt="shape" class="shape2" />
     </section>
-  
+
     <!-- Books Categories-->
     <section class="books-categories">
       <div class="container">
         <div class="row">
           <div class="col text-center">
             <h2 class="text-xl mb-4">What are you Interested in?</h2>
-            <p>Select a category that you are interested in to view book summaries <br>in that category.</p>
+            <p>
+              Select a category that you are interested in to view book
+              summaries <br />in that category.
+            </p>
             <div class="btn-wrap">
               <button class="search-btn">
-                <img src="/assets/images/search-white.svg"  alt="search"/>
+                <img src="/assets/images/search-white.svg" alt="search" />
               </button>
               <button class="btn btn-outline">Career & Success</button>
               <button class="btn btn-outline">Literary Fiction</button>
               <button class="btn btn-outline">Management & Leadership</button>
-              <button class="btn btn-outline">Historical Fiction </button>
+              <button class="btn btn-outline">Historical Fiction</button>
               <button class="btn btn-outline">Biographies & Memoirs</button>
               <button class="btn btn-outline">Personal Development</button>
               <button class="btn btn-outline">Science Fiction & Fantasy</button>
@@ -617,7 +740,13 @@
         <div class="swiper booksSummarySlider">
           <div class="swiper-wrapper">
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(0, 0, 133, 0.05);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(0, 0, 133, 0.05);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book1.png"
@@ -642,7 +771,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(255, 231, 87, 0.10);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(255, 231, 87, 0.1);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book2.png"
@@ -667,9 +802,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="
-              border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(33, 191, 212, 0.08);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(33, 191, 212, 0.08);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book3.png"
@@ -694,9 +833,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="
-              border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(244, 200, 225, 0.30);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(244, 200, 225, 0.3);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book4.png"
@@ -721,8 +864,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(93, 232, 193, 0.10);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(93, 232, 193, 0.1);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book5.png"
@@ -747,7 +895,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(255, 231, 87, 0.10);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(255, 231, 87, 0.1);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book2.png"
@@ -772,9 +926,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="
-              border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(33, 191, 212, 0.08);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(33, 191, 212, 0.08);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book3.png"
@@ -799,9 +957,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="
-              border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(244, 200, 225, 0.30);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(244, 200, 225, 0.3);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book4.png"
@@ -826,8 +988,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(93, 232, 193, 0.10);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(93, 232, 193, 0.1);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book5.png"
@@ -852,7 +1019,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="border: 1px solid rgba(31, 30, 30, 0.10); background: rgba(255, 231, 87, 0.10);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(255, 231, 87, 0.1);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book2.png"
@@ -877,9 +1050,13 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="card" style="
-              border: 1px solid rgba(31, 30, 30, 0.10);
-              background: rgba(33, 191, 212, 0.08);">
+              <div
+                class="card"
+                style="
+                  border: 1px solid rgba(31, 30, 30, 0.1);
+                  background: rgba(33, 191, 212, 0.08);
+                "
+              >
                 <div class="cover">
                   <img
                     src="/assets/images/book3.png"
@@ -911,129 +1088,137 @@
         <div class="text-center">
           <div class="slider-nav">
             <!-- pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- arrow and prev-->
-          <div class="swiper-button-prev">
-            <img src="assets/images/prev.svg" alt="Prev" />
+            <div class="swiper-pagination"></div>
+            <!-- arrow and prev-->
+            <div class="swiper-button-prev">
+              <img src="assets/images/prev.svg" alt="Prev" />
+            </div>
+            <div class="swiper-button-next">
+              <img src="assets/images/next.svg" alt="Next" />
+            </div>
           </div>
-          <div class="swiper-button-next">
-            <img src="assets/images/next.svg" alt="Next" />
-          </div>
-  
         </div>
       </div>
-      </div>
-
     </section>
 
     <!-- Available on-->
     <section class="available-on">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-5 left ">
-              <div class="align-container">
-                <h2 class="text-xl">Available on <br/>
-                  Mobile and Desktop</h2>
-                  <p>Learn on the go anytime, anywhere using our mobile app.  </p>
-                  
-                  <div class="app-links">
-<div class="flex items-center gap-2">
-                    <a href="#">
-                    <img src="/assets/images/appstore-button.svg" alt="App Store" class="app-store">
-                    </a>  
-                    <a href="#">
-                      <img src="/assets/images/googleplay-button.svg" alt="Google Play Store" class="app-store">
-                      </a>  
-                  </div>
-                  </div>
-                  
+          <div class="col-md-6 col-lg-6 col-xl-5 left">
+            <div class="align-container">
+              <h2 class="text-xl">
+                Available on <br />
+                Mobile and Desktop
+              </h2>
+              <p>Learn on the go anytime, anywhere using our mobile app.</p>
 
-                  <div class="excellent font-semibold">Excellent 5/5</div>
-                  <div>
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                  <p class="rating-text">Over 1250 reviews on</p>
-                  <div>
-                    </div>
-                    
+              <div class="app-links">
+                <div class="flex items-center gap-2">
+                  <a href="#">
+                    <img
+                      src="/assets/images/appstore-button.svg"
+                      alt="App Store"
+                      class="app-store"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="/assets/images/googleplay-button.svg"
+                      alt="Google Play Store"
+                      class="app-store"
+                    />
+                  </a>
+                </div>
               </div>
+
+              <div class="excellent font-semibold">Excellent 5/5</div>
+              <div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="rating-text">Over 1250 reviews on</p>
+              <div></div>
+            </div>
           </div>
           <div class="col-md-6 col-lg-6 col-xl-7 pr-0 text-right">
-            <img src="/assets/images/app-screenshot.png" alt="Mobile and Desktop" class="img-fluid app-screenshot">
+            <img
+              src="/assets/images/app-screenshot.png"
+              alt="Mobile and Desktop"
+              class="img-fluid app-screenshot"
+            />
           </div>
-
         </div>
       </div>
     </section>
     <section class="featured-on bg-dark text-white">
       <div class="container">
-          <div class="swiper logoSlider">
-            <div class="swiper-wrapper">
-              <swiper-slide>
-                <img
-                  src="/assets/images/mashable-logo-white.png"
-                  alt="Mashable"
-                  width="123"
-                  height="39"
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="/assets/images/entrepreneur-logo.png"
-                  alt="Entrepreneur"
-                  width="119"
-                  height="24"
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="assets/images/apple.png"
-                  alt="Apple"
-                  width="85"
-                  height="29"
-                />
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="/assets/images/new-york-post-logo1.png"
-                  alt="New York Post"
-                  width="178"
-                  height="27"
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="/assets/images/appsumo.svg"
-                  alt="Forbes"
-                  width="121"
-                  height="47"
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="/assets/images/stack-social.svg"
-                  alt="Forbes"
-                  width="34"
-                  height="34"
-                />
-              </swiper-slide>
-              <swiper-slide>
-                <img
-                  src="/assets/images/nbc-news.svg"
-                  alt="Forbes"
-                  width="111"
-                  height="18"
-                />
-              </swiper-slide>
-            </div>
+        <div class="swiper logoSlider">
+          <div class="swiper-wrapper">
+            <swiper-slide>
+              <img
+                src="/assets/images/mashable-logo-white.png"
+                alt="Mashable"
+                width="123"
+                height="39"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="/assets/images/entrepreneur-logo.png"
+                alt="Entrepreneur"
+                width="119"
+                height="24"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="assets/images/apple.png"
+                alt="Apple"
+                width="85"
+                height="29"
+              />
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="/assets/images/new-york-post-logo1.png"
+                alt="New York Post"
+                width="178"
+                height="27"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="/assets/images/appsumo.svg"
+                alt="Forbes"
+                width="121"
+                height="47"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="/assets/images/stack-social.svg"
+                alt="Forbes"
+                width="34"
+                height="34"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="/assets/images/nbc-news.svg"
+                alt="Forbes"
+                width="111"
+                height="18"
+              />
+            </swiper-slide>
           </div>
+        </div>
       </div>
     </section>
 
@@ -1043,14 +1228,17 @@
         <div class="row">
           <div class="col text-center">
             <h2 class="text-xl">People ❤️ SumizeIt</h2>
-            <p>Thousands of users love sumizeit.com, a leading book <br> summary website!</p>
+            <p>
+              Thousands of users love sumizeit.com, a leading book <br />
+              summary website!
+            </p>
           </div>
         </div>
-        </div>
+      </div>
 
-        <div class="container-fluid align-container">
-          <div class="swiper reviewsSlider">
-              <!-- arrow and prev-->
+      <div class="container-fluid align-container">
+        <div class="swiper reviewsSlider">
+          <!-- arrow and prev-->
           <div class="swiper-button-prev">
             <img src="assets/images/next-white.svg" alt="Prev" class="rotate" />
           </div>
@@ -1058,151 +1246,186 @@
             <img src="assets/images/next-white.svg" alt="Next" />
           </div>
 
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="content">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="content">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="title font-semibold">I love this app!</div>
+                  <div class="review-text">
+                    She a busy executive, I don't have time to read entire
+                    books, but I still want to stay informed. This app provides
+                    me with concise summaries of the latest bestsellers, so I
+                    can stay up-to-date on the latest trends and ideas without
+                    sacrificing my precious time.
+                  </div>
+                  <div class="meta">
+                    <div class="photo">
+                      <img
+                        src="/assets/images/u1.png"
+                        alt="User"
+                        class="user-img"
+                      />
                     </div>
-                    <div class="title font-semibold">I love this app!</div>
-                    <div class="review-text">
-                      She a busy executive, I don't have time to read entire books, but I still want to stay informed. This app provides me with concise summaries of the latest bestsellers, so I can stay up-to-date on the latest trends and ideas without sacrificing my precious time.
-                    </div>
-                    <div class="meta">
-                      <div class="photo">
-                        <img src="/assets/images/u1.png" alt="User" class="user-img">
-                      </div>
-                      <div>
-                        <div class="user-name">Jane Doe</div>
-                        <div class="location">New York, NY</div>
-                      </div>
+                    <div>
+                      <div class="user-name">Jane Doe</div>
+                      <div class="location">New York, NY</div>
                     </div>
                   </div>
-                    </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="content">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="content">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="title font-semibold">Easy to use & explore</div>
+                  <div class="review-text">
+                    This app has reignited my love of reading. It's so easy to
+                    use and the summaries are always well-written and
+                    informative.
+                  </div>
+                  <div class="meta">
+                    <div class="photo">
+                      <img
+                        src="/assets/images/u2.png"
+                        alt="User"
+                        class="user-img"
+                      />
                     </div>
-                    <div class="title font-semibold">Easy to use & explore</div>
-                    <div class="review-text">
-                      This app has reignited my love of reading. It's so easy to use and the summaries are always well-written and informative.
-                    </div>
-                    <div class="meta">
-                      <div class="photo">
-                        <img src="/assets/images/u2.png" alt="User" class="user-img">
-                      </div>
-                      <div>
-                        <div class="user-name">Dane</div>
-                        <div class="location">New York, NY</div>
-                      </div>
+                    <div>
+                      <div class="user-name">Dane</div>
+                      <div class="location">New York, NY</div>
                     </div>
                   </div>
-                    </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="content">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="content">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="title font-semibold">Great product.</div>
+                  <div class="review-text">
+                    Have used them for a long time. One of my favorite things
+                    about them is that they are able to summarize a whole book
+                    into just 10 minutes
+                  </div>
+                  <div class="meta">
+                    <div class="photo">
+                      <img
+                        src="/assets/images/u3.png"
+                        alt="User"
+                        class="user-img"
+                      />
                     </div>
-                    <div class="title font-semibold">Great product.</div>
-                    <div class="review-text">
-                      Have used them for a long time. One of my favorite things about them is that they are able to summarize a whole book into just 10 minutes
-                    </div>
-                    <div class="meta">
-                      <div class="photo">
-                        <img src="/assets/images/u3.png" alt="User" class="user-img">
-                      </div>
-                      <div>
-                        <div class="user-name">Dale</div>
-                        <div class="location">Sydney, Australia</div>
-                      </div>
+                    <div>
+                      <div class="user-name">Dale</div>
+                      <div class="location">Sydney, Australia</div>
                     </div>
                   </div>
-                    </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="content">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="content">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="title font-semibold">
+                    Lifesaver for my studies!
+                  </div>
+                  <div class="review-text">
+                    This app has been a lifesaver for my studies. Instead of
+                    struggling to finish textbooks, I can quickly get the key
+                    points from each chapter.
+                  </div>
+                  <div class="meta">
+                    <div class="photo">
+                      <img
+                        src="/assets/images/u4.png"
+                        alt="User"
+                        class="user-img"
+                      />
                     </div>
-                    <div class="title font-semibold">Lifesaver for my studies!</div>
-                    <div class="review-text">
-                      This app has been a lifesaver for my studies. Instead of struggling to finish textbooks, I can quickly get the key points from each chapter.
-                    </div>
-                    <div class="meta">
-                      <div class="photo">
-                        <img src="/assets/images/u4.png" alt="User" class="user-img">
-                      </div>
-                      <div>
-                        <div class="user-name">Cameron </div>
-                        <div class="location">Edinburgh, UK</div>
-                      </div>
+                    <div>
+                      <div class="user-name">Cameron</div>
+                      <div class="location">Edinburgh, UK</div>
                     </div>
                   </div>
-                    </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="content">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="content">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="title font-semibold">I love this app!</div>
+                  <div class="review-text">
+                    She a busy executive, I don't have time to read entire
+                    books, but I still want to stay informed. This app provides
+                    me with concise summaries of the latest bestsellers, so I
+                    can stay up-to-date on the latest trends and ideas without
+                    sacrificing my precious time.
+                  </div>
+                  <div class="meta">
+                    <div class="photo">
+                      <img
+                        src="/assets/images/u1.png"
+                        alt="User"
+                        class="user-img"
+                      />
                     </div>
-                    <div class="title font-semibold">I love this app!</div>
-                    <div class="review-text">
-                      She a busy executive, I don't have time to read entire books, but I still want to stay informed. This app provides me with concise summaries of the latest bestsellers, so I can stay up-to-date on the latest trends and ideas without sacrificing my precious time.
-                    </div>
-                    <div class="meta">
-                      <div class="photo">
-                        <img src="/assets/images/u1.png" alt="User" class="user-img">
-                      </div>
-                      <div>
-                        <div class="user-name">Jane Doe</div>
-                        <div class="location">New York, NY</div>
-                      </div>
+                    <div>
+                      <div class="user-name">Jane Doe</div>
+                      <div class="location">New York, NY</div>
                     </div>
                   </div>
-                    </div>
+                </div>
               </div>
-
-              </div>
-        </div>
-        </div>
-
-        <div>
-          <div class="text-center">
-            <a href="#" class="btn btn-primary">Start your free trail</a>
+            </div>
           </div>
         </div>
-  </section>
-    
+      </div>
+
+      <div>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary">Start your free trail</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer  -->
-    
+
     <section class="catalogue">
       <div class="container">
         <div class="row">
@@ -1215,139 +1438,151 @@
           <div class="col-md-4">
             <h3>Popular Titles</h3>
             <ul class="links">
-              <li><a href="#">Atomic Habits</a>  </li>
-             <li><a href="#">The 5 AM Club</a>  </li>
-              <li><a href="#">The 7 Habits of Highly Effective People</a> </li> 
-                <li><a href="#">Rich Dad, Poor Dad</a>  </li>
-                  <li><a href="#">12 Rules For Life</a>  </li>
-                  <li><a href="#">Thinking, Fast and Slow</a>  </li>
+              <li><a href="#">Atomic Habits</a></li>
+              <li><a href="#">The 5 AM Club</a></li>
+              <li><a href="#">The 7 Habits of Highly Effective People</a></li>
+              <li><a href="#">Rich Dad, Poor Dad</a></li>
+              <li><a href="#">12 Rules For Life</a></li>
+              <li><a href="#">Thinking, Fast and Slow</a></li>
             </ul>
           </div>
 
           <div class="col-md-4">
             <h3>Popular Categories</h3>
             <ul class="links">
-              <li><a href="#">Personal Development</a>  </li>
-             <li><a href="#">Psychology</a>  </li>
-              <li><a href="#">Productivity</a> </li> 
-                <li><a href="#">Management & Leadership</a>  </li>
-                  <li><a href="#">Motivation & Inspiration</a>  </li>
-                  <li><a href="#">Mindfulness & Happiness</a>  </li>
+              <li><a href="#">Personal Development</a></li>
+              <li><a href="#">Psychology</a></li>
+              <li><a href="#">Productivity</a></li>
+              <li><a href="#">Management & Leadership</a></li>
+              <li><a href="#">Motivation & Inspiration</a></li>
+              <li><a href="#">Mindfulness & Happiness</a></li>
             </ul>
           </div>
 
           <div class="col-md-4">
             <h3>Popular Topics</h3>
             <ul class="links">
-              <li><a href="#">Best Christianity Books</a>  </li>
-             <li><a href="#">Best Love Books</a>  </li>
-              <li><a href="#">Best Leadership Books</a> </li> 
-                <li><a href="#">Best Autobiographies Books</a>  </li>
-                  <li><a href="#">Best Biographies Books</a>  </li>
-                  <li><a href="#">Best Persuasion Books</a>  </li>
+              <li><a href="#">Best Christianity Books</a></li>
+              <li><a href="#">Best Love Books</a></li>
+              <li><a href="#">Best Leadership Books</a></li>
+              <li><a href="#">Best Autobiographies Books</a></li>
+              <li><a href="#">Best Biographies Books</a></li>
+              <li><a href="#">Best Persuasion Books</a></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    
+
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-              <div class="row">
-                <div class="col-md-8">
-                  <img src="/assets/images/logo-white.svg" alt="Sumizeit" class="logo mb-5">
-                  <p class="text-white leading-26">Satisfy Your Curiosity & Expand Your Knowledge with <br />Easy-to-Digest, 15-minute Non-Fiction Book Summaries.<br> 15-minute book summary app.</p>
+            <div class="row">
+              <div class="col-md-8">
+                <img
+                  src="/assets/images/logo-white.svg"
+                  alt="Sumizeit"
+                  class="logo mb-5"
+                />
+                <p class="text-white leading-26">
+                  Satisfy Your Curiosity & Expand Your Knowledge with
+                  <br />Easy-to-Digest, 15-minute Non-Fiction Book Summaries.<br />
+                  15-minute book summary app.
+                </p>
 
-                  <img src="/assets/images/app-store-btn.svg" alt="App Store" class="app-store-btn">
-
-                
-                </div>
-                <div class="col-md-4">
-                  <div class="widget">
+                <img
+                  src="/assets/images/app-store-btn.svg"
+                  alt="App Store"
+                  class="app-store-btn"
+                />
+              </div>
+              <div class="col-md-4">
+                <div class="widget">
                   <h3>Useful links</h3>
                   <ul class="links">
-                    <li><a href="#">Pricing</a>  </li>
-                   <li><a href="#">Intelligence Quiz</a>  </li>
-                    <li><a href="#">Book Summaries</a> </li> 
-                      <li><a href="#">Gift Sumizeit</a>  </li>
-                        <li><a href="#">Affiliate Program</a>  </li>
-                        <li><a href="#">Cancel Subscription</a>  </li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Intelligence Quiz</a></li>
+                    <li><a href="#">Book Summaries</a></li>
+                    <li><a href="#">Gift Sumizeit</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Cancel Subscription</a></li>
                   </ul>
-                  </div>
-               </div>
-          </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-md-4">
             <div class="widget">
-             <h3>Company</h3>
-                  <ul class="links">
-                    <li><a href="#">About</a>  </li>
-                   <li><a href="#">Teams</a>  </li>
-                    <li><a href="#">Blog</a> </li> 
-                  </ul>
-                  </div>
+              <h3>Company</h3>
+              <ul class="links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-md-6">
-            <p class="text-white"> info (at) sumizeit (dot) com<br>Need help? Call us at (305) 501-1394</p>
+            <p class="text-white">
+              info (at) sumizeit (dot) com<br />Need help? Call us at (305)
+              501-1394
+            </p>
           </div>
 
           <div class="col-md-6">
             <ul class="social-links">
               <li>
                 <a href="#">
-                  <img src="/assets/images/facebook.svg" alt="Facebook">
+                  <img src="/assets/images/facebook.svg" alt="Facebook" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="/assets/images/x.svg" alt="X">
+                  <img src="/assets/images/x.svg" alt="X" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="/assets/images/youtube-play.svg" alt="Youtube">
+                  <img src="/assets/images/youtube-play.svg" alt="Youtube" />
                 </a>
               </li>
               <li>
-              <a href="#">
-                <img src="/assets/images/instagram.svg" alt="Instagram">
-              </a>
-            </li>
+                <a href="#">
+                  <img src="/assets/images/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      
+
       <div class="bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="text-white">© 2025 Wiser. All rights reserved.</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="text-white">© 2025 Wiser. All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>
+                  <a href="#">Terms of Service</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Cookies</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-6">
-            <ul>
-              <li>
-                <a href="#">Terms of Service</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-            </ul>
-          </div>
         </div>
-        </div>
-        </div>
-      
+      </div>
     </footer>
-  
+
     <div id="mobile-menu" class="mobile-menu">
       <button id="close-menu" class="close-menu">
         <i class="fas fa-times"></i>
@@ -1370,78 +1605,77 @@
         spaceBetween: 50,
       });
 
-          var swiper = new Swiper(".bookSlider", {
-            spaceBetween: 30,
-            breakpoints: {
-            1920: {
-              slidesPerView: 5.6, // 1920px / 341px ≈ 5.6
-            },
-            1660: {
-              slidesPerView: 4.8, // 1660px / 341px ≈ 4.8
-            },
-            1440: {
-              slidesPerView: 4.2, // 1440px / 341px ≈ 4.2
-            },
-            1280: {
-              slidesPerView: 3.6, // 1280px / 341px ≈ 3.6
-            },
-            1024: {
-              slidesPerView: 3.0, // 1024px / 341px ≈ 3.0
-            },
-            768: {
-              slidesPerView: 2.2, // 768px / 341px ≈ 2.2
-            },
-            640: {
-              slidesPerView: 1.8, // 640px / 341px ≈ 1.8
-            },
-            480: {
-              slidesPerView: 1.4, // 480px / 341px ≈ 1.4
-            },
-            0: {
-              slidesPerView: 1.2, // Default for very small screens
-            },
+      var swiper = new Swiper(".bookSlider", {
+        spaceBetween: 30,
+        breakpoints: {
+          1920: {
+            slidesPerView: 5.6, // 1920px / 341px ≈ 5.6
           },
-            pagination: {
-              el: ".best-selling-books .swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".best-selling-books .swiper-button-next",
-              prevEl: ".best-selling-books .swiper-button-prev",
-            },
-          });
-          
-          var swiper = new Swiper(".booksSummarySlider", {
-      centeredSlides: true,
-      slidesPerGroup: 3,
-      loop: true,
-      slidesPerView: 'auto', // Let it auto-adjust based on min-width
-      breakpoints: {
-        1920: { slidesPerView: 5.2},
-        1800: { slidesPerView: 4.9  },
-        1600: { slidesPerView: 4.4 },
-        1440: { slidesPerView: 4.0 },
-        1366: { slidesPerView: 3.8 },
-        1280: { slidesPerView: 3.5 },
-        991: { slidesPerView: 2.7 },
-        768: { slidesPerView: 2.2 },
-        640: { slidesPerView: 1.8 },
-        480: { slidesPerView: 1.4 },
-        0: { slidesPerView: 1.2 },
-      },
-      pagination: {
-        el: ".books-categories .swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".books-categories .swiper-button-next",
-        prevEl: ".books-categories .swiper-button-prev",
-      },
-    });
+          1660: {
+            slidesPerView: 4.8, // 1660px / 341px ≈ 4.8
+          },
+          1440: {
+            slidesPerView: 4.2, // 1440px / 341px ≈ 4.2
+          },
+          1280: {
+            slidesPerView: 3.6, // 1280px / 341px ≈ 3.6
+          },
+          1024: {
+            slidesPerView: 3.0, // 1024px / 341px ≈ 3.0
+          },
+          768: {
+            slidesPerView: 2.2, // 768px / 341px ≈ 2.2
+          },
+          640: {
+            slidesPerView: 1.8, // 640px / 341px ≈ 1.8
+          },
+          480: {
+            slidesPerView: 1.4, // 480px / 341px ≈ 1.4
+          },
+          0: {
+            slidesPerView: 1.2, // Default for very small screens
+          },
+        },
+        pagination: {
+          el: ".best-selling-books .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".best-selling-books .swiper-button-next",
+          prevEl: ".best-selling-books .swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".booksSummarySlider", {
+        centeredSlides: true,
+        slidesPerGroup: 3,
+        loop: true,
+        slidesPerView: "auto", // Let it auto-adjust based on min-width
+        breakpoints: {
+          1920: { slidesPerView: 5.2 },
+          1800: { slidesPerView: 4.9 },
+          1600: { slidesPerView: 4.4 },
+          1440: { slidesPerView: 4.0 },
+          1366: { slidesPerView: 3.8 },
+          1280: { slidesPerView: 3.5 },
+          991: { slidesPerView: 2.7 },
+          768: { slidesPerView: 2.2 },
+          640: { slidesPerView: 1.8 },
+          480: { slidesPerView: 1.4 },
+          0: { slidesPerView: 1.2 },
+        },
+        pagination: {
+          el: ".books-categories .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".books-categories .swiper-button-next",
+          prevEl: ".books-categories .swiper-button-prev",
+        },
+      });
 
       var swiper = new Swiper(".reviewsSlider", {
-    
-         breakpoints: {
+        breakpoints: {
           1660: {
             slidesPerView: 4.8,
             spaceBetween: 30,
@@ -1450,10 +1684,10 @@
             slidesPerView: 4.5,
             spaceBetween: 30,
           },
-         1024: {
-           slidesPerView: 3.2,
-           spaceBetween: 30,
-         },
+          1024: {
+            slidesPerView: 3.2,
+            spaceBetween: 30,
+          },
           768: {
             slidesPerView: 2.6,
             spaceBetween: 20,
@@ -1464,71 +1698,66 @@
           },
         },
         navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      })
-      
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
-    
-<script>
-  // Toggle mobile menu
-  document.getElementById("menu-btn").addEventListener("click", function () {
-    var mobileMenu = document.getElementById("mobile-menu");
-    var menuBtn = document.getElementById("menu-btn");
-    if (mobileMenu.style.top === "0px") {
-      mobileMenu.style.top = "-100%";
-      menuBtn.querySelector(".fa-bars").classList.remove("d-none");
-      menuBtn.querySelector(".fa-times").classList.add("d-none");
-    } else {
-      mobileMenu.style.top = "0";
-      menuBtn.querySelector(".fa-bars").classList.add("d-none");
-      menuBtn.querySelector(".fa-times").classList.remove("d-none");
-    }
-  });
 
-  document.getElementById("close-menu").addEventListener("click", function () {
-    document.getElementById("mobile-menu").style.top = "-100%";
-    var menuBtn = document.getElementById("menu-btn");
-    menuBtn.querySelector(".fa-bars").classList.remove("d-none");
-    menuBtn.querySelector(".fa-times").classList.add("d-none");
-  });
+    <script>
+      // Toggle mobile menu
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          var mobileMenu = document.getElementById("mobile-menu");
+          var menuBtn = document.getElementById("menu-btn");
+          if (mobileMenu.style.top === "0px") {
+            mobileMenu.style.top = "-100%";
+            menuBtn.querySelector(".fa-bars").classList.remove("d-none");
+            menuBtn.querySelector(".fa-times").classList.add("d-none");
+          } else {
+            mobileMenu.style.top = "0";
+            menuBtn.querySelector(".fa-bars").classList.add("d-none");
+            menuBtn.querySelector(".fa-times").classList.remove("d-none");
+          }
+        });
 
-  document.addEventListener("DOMContentLoaded", function () {
-  let swiper = new Swiper(".fullScreenSlider", {
-    direction: "vertical",
-    loop: false,
-    speed: 800, // Adjust speed for smoother transitions
-    mousewheel: {
-      invert: false,
-      releaseOnEdges: true,
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    on: {
-      reachEnd: function () {
-        setTimeout(() => {
-          document.querySelector(".next-section").scrollIntoView({ behavior: "smooth", block: "start" });
-          window.scrollBy(0, -40);
-        }, 500);
-      },
-      reachBeginning: function () {
-        setTimeout(() => {
-          document.querySelector(".previous-section").scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 500);
-      },
-    },
-  });
-});
+      document
+        .getElementById("close-menu")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").style.top = "-100%";
+          var menuBtn = document.getElementById("menu-btn");
+          menuBtn.querySelector(".fa-bars").classList.remove("d-none");
+          menuBtn.querySelector(".fa-times").classList.add("d-none");
+        });
 
-</script>
-</script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const steps = document.querySelectorAll(
+        ".Steps_steps-section__step__1gZnH"
+      );
+      const images = document.querySelectorAll(
+        ".Steps_steps-section__image__Vv7f0"
+      );
+
+      steps.forEach((step, index) => {
+        ScrollTrigger.create({
+          trigger: step,
+          start: "top center",
+          end: "bottom center",
+          toggleClass: { targets: step, className: "active" },
+          onEnter: () => {
+            images.forEach((img, i) => {
+              img.classList.toggle("active", i === index);
+            });
+          },
+          onLeaveBack: () => {
+            images.forEach((img, i) => {
+              img.classList.toggle("active", i === index);
+            });
+          },
+        });
+      });
+    </script>
   </body>
 </html>
-
