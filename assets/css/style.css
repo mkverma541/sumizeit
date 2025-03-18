@@ -1280,6 +1280,12 @@ footer .bottom a {
   overflow: hidden;
   height: auto !important;
 }
+.whySumizeitSlider .swiper-wrapper {
+  padding-bottom: 30px;
+}
+.whySumizeitSlider .swiper-pagination {
+  bottom: 13px;
+}
 .whySumizeitSlider .single-slide img {
   margin-bottom: 20px;
 }

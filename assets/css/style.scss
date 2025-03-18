@@ -1170,6 +1170,12 @@ footer {
   margin-top: 30px;
   overflow: hidden;
   height: auto !important;
+  .swiper-wrapper {
+    padding-bottom: 30px;
+  }
+  .swiper-pagination {
+    bottom: 13px;
+  }
   .single-slide {
     img {
       margin-bottom: 20px;
